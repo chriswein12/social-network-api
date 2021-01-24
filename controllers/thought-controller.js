@@ -1,5 +1,4 @@
 const { User, Thought } = require('../models');
-const { param } = require('../routes');
 
 const thoughtController = {
 
@@ -26,7 +25,7 @@ const thoughtController = {
             .select('-__v')
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: 'No thought found with this id!' });
+                    res.status(404).json({ message: 'No Thought found with this id!' });
                     return;
                 }
                 res.json(dbUserData);
